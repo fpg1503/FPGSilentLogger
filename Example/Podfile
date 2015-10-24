@@ -1,5 +1,4 @@
 source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
 
 target 'FPGSilentLogger_Example', :exclusive => true do
   pod "FPGSilentLogger", :path => "../"
@@ -7,6 +6,5 @@ end
 
 target 'FPGSilentLogger_Tests', :exclusive => true do
   pod "FPGSilentLogger", :path => "../"
-
   
 end
