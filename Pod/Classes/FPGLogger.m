@@ -11,21 +11,28 @@
 
 #define fpg_logString @"%@%@", prefix, string
 
+NSString * _Nonnull NSStrigFromBool(BOOL boolean) {
+    return boolean ? @"YES" : @"NO";
+}
+
 @implementation FPGLogger
 
 + (void)logString:(nonnull NSString *)string {
-    NSString *prefix = [delegate respondsToSelector:@selector(logPrefix)] ? [delegate logPrefix] : @"";
-        
-    if ([delegate conformsToProtocol:@protocol(FPGLoggerDelegate) ]) {
-        [delegate logString:[NSString stringWithFormat:fpg_logString]];
-    } else {
-        #ifdef CLS_LOG
-            CLS_LOG(fpg_logString);
-        #else
-            NSLog(fpg_logString);
-        #endif
+    //avoid locking caller if delegate logger is too slow
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSString *prefix = [delegate respondsToSelector:@selector(logPrefix)] ? [delegate logPrefix] : @"";
+            
+        if ([delegate conformsToProtocol:@protocol(FPGLoggerDelegate) ]) {
+            [delegate logString:[NSString stringWithFormat:fpg_logString]];
+        } else {
+            #ifdef CLS_LOG
+                CLS_LOG(fpg_logString);
+            #else
+                NSLog(fpg_logString);
+            #endif
 
-    }
+        }
+    });
 }
 
 @end

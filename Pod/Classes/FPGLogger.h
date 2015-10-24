@@ -11,6 +11,8 @@
 
 @protocol FPGLoggerDelegate;
 
+NSString * _Nonnull NSStrigFromBool(BOOL boolean);
+
 static _Nullable id<FPGLoggerDelegate> delegate;
 
 @interface FPGLogger : NSObject

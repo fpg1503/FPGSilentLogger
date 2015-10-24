@@ -14,7 +14,7 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [FPGSwizzleHelper fpg_swizzleMethod:@selector(initWithDomain:code:userInfo:) withMethod:@selector(fpg_initWithDomain:code:userInfo:) ofClass:[self class]];
+        Swizzle(initWithDomain:code:userInfo:)
     });
 }
 
