@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "FPGSilentLogger"
   s.version          = "0.1.0"
-  s.summary          = "A short description of FPGSilentLogger."
+  s.summary          = "Plug and play automatic error and navigation logging for iOS apps."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,6 +17,12 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+  Plug and play automatic error and navigation logging for iOS apps.
+
+  #TODO
+  - Add a decent description
+  - Add support to user navigation
+  - Add options to select what to log
                        DESC
 
   s.homepage         = "https://github.com/fpg1503/FPGSilentLogger"

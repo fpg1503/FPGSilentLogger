@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33F5A0FC828CC6EED2B2390D /* Pods_FPGSilentLogger_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA90C03EB8BA87D13ED1FA80 /* Pods_FPGSilentLogger_Example.framework */; };
-		51B5818D0E5956E3B7C3CDEC /* Pods_FPGSilentLogger_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E267E939C6BCFA6766204598 /* Pods_FPGSilentLogger_Tests.framework */; };
+		106A911BF70CF01D60615670 /* libPods-FPGSilentLogger_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD13EC72037645D81702872C /* libPods-FPGSilentLogger_Tests.a */; };
+		2F5C46B492A71D7A263C7B6E /* libPods-FPGSilentLogger_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD773F096DB8E18A1314CE8 /* libPods-FPGSilentLogger_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -58,13 +58,13 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		68720C6E0F26B3BF79BA37A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		68F4D6FFB3FADB20BE84621A /* Pods-FPGSilentLogger_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPGSilentLogger_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FPGSilentLogger_Example/Pods-FPGSilentLogger_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		6BD773F096DB8E18A1314CE8 /* libPods-FPGSilentLogger_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FPGSilentLogger_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		711F27941033CE43FB547D0C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AAC737CBDFDE1781C0882F6B /* FPGSilentLogger.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FPGSilentLogger.podspec; path = ../FPGSilentLogger.podspec; sourceTree = "<group>"; };
 		BAF5637193D383483CE7E4FA /* Pods-FPGSilentLogger_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPGSilentLogger_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FPGSilentLogger_Tests/Pods-FPGSilentLogger_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D714491FAD7E8C9F18F19B70 /* Pods-FPGSilentLogger_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPGSilentLogger_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FPGSilentLogger_Example/Pods-FPGSilentLogger_Example.release.xcconfig"; sourceTree = "<group>"; };
-		DA90C03EB8BA87D13ED1FA80 /* Pods_FPGSilentLogger_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPGSilentLogger_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E267E939C6BCFA6766204598 /* Pods_FPGSilentLogger_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPGSilentLogger_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD13EC72037645D81702872C /* libPods-FPGSilentLogger_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FPGSilentLogger_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				33F5A0FC828CC6EED2B2390D /* Pods_FPGSilentLogger_Example.framework in Frameworks */,
+				2F5C46B492A71D7A263C7B6E /* libPods-FPGSilentLogger_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				51B5818D0E5956E3B7C3CDEC /* Pods_FPGSilentLogger_Tests.framework in Frameworks */,
+				106A911BF70CF01D60615670 /* libPods-FPGSilentLogger_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				DA90C03EB8BA87D13ED1FA80 /* Pods_FPGSilentLogger_Example.framework */,
-				E267E939C6BCFA6766204598 /* Pods_FPGSilentLogger_Tests.framework */,
+				6BD773F096DB8E18A1314CE8 /* libPods-FPGSilentLogger_Example.a */,
+				DD13EC72037645D81702872C /* libPods-FPGSilentLogger_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
