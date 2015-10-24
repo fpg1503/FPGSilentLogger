@@ -17,6 +17,10 @@ NSString * _Nonnull NSStrigFromBool(BOOL boolean) {
 
 @implementation FPGLogger
 
++ (void)setDelegate:(nullable id<FPGLoggerDelegate>)delegate_ {
+    delegate = delegate_;
+}
+
 + (void)logString:(nonnull NSString *)string {
     //avoid locking caller if delegate logger is too slow
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{

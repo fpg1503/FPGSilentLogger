@@ -7,13 +7,24 @@
 //
 
 #import "FPGViewController.h"
+#import <FPGSilentLogger/FPGLogger.h>
 
-@interface FPGViewController ()
+@interface FPGViewController () <FPGLoggerDelegate>
 
 @end
 
 @implementation FPGViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        //Using custom logger
+        //You probably want to do this in a better place!
+        //View did load will be logged using the default logger
+        [FPGLogger setDelegate:self];
+    }
+    return self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -27,10 +38,13 @@
                 }] resume];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - FPGLoggerDelegate
+- (void)logString:(nonnull NSString *)string {
+    NSLog(@"%@", string);
+}
+
+- (nullable NSString *)logPrefix {
+    return @"[FPG] ";
 }
 
 @end
