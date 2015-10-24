@@ -9,7 +9,25 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+### What is FPGSilentLogger?
+FPGSilentLogger logs all generated erros and view controller lifecycle automatically! 
+
+### How does it work?
+By swizzling methods of our interest all instances of `NSError` and `UIViewController` are magically logged! We use [`JRSwizzle`](https://github.com/rentzsch/jrswizzle) so you are sure that *this package Does The Right Thing&trade;*.
+
+### Customization
+Simply conform to `FPGLoggerDelegate` and call `+ [FPGLogger setDelegate:]` with your conformant object!
+
+```objective-c
+#pragma mark - FPGLoggerDelegate
+- (void)logString:(nonnull NSString *)string {
+    CLS_Log(@"%@", string);
+}
+
+- (nullable NSString *)logPrefix {
+    return @"[FPG] ";
+}
+```
 
 ## Installation
 
