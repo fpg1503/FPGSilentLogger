@@ -1,0 +1,17 @@
+PODS:
+  - FPGSilentLogger (0.1.0):
+    - JRSwizzle
+  - JRSwizzle (1.0)
+
+DEPENDENCIES:
+  - FPGSilentLogger (from `../`)
+
+EXTERNAL SOURCES:
+  FPGSilentLogger:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FPGSilentLogger: 2a28b61562bb977b1daa673b07000a07342bfe1b
+  JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
+
+COCOAPODS: 0.39.0
