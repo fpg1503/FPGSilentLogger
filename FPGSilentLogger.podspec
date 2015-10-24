@@ -19,12 +19,12 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/FPGSilentLogger"
+  s.homepage         = "https://github.com/fpg1503/FPGSilentLogger"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Francesco Perrotti-Garcia" => "fpg1503@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/FPGSilentLogger.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/fpg1503/FPGSilentLogger.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/fpg1503'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
