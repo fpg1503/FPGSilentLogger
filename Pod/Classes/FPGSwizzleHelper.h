@@ -13,7 +13,7 @@
 
 #define Swizzle(method) [FPGSwizzleHelper fpg_swizzleMethod:@selector(method) withMethod:@selector(fpg_##method) ofClass:[self class]];
 
-#define SwizzleClass(class_method) [FPGSwizzleHelper fpg_swizzleClassMethod:@selector(class_method) withMethod:@selector(##class_method) ofClass:[self class]];
+#define SwizzleClass(class_method) [FPGSwizzleHelper fpg_swizzleClassMethod:@selector(class_method) withClassMethod:@selector(fpg_##class_method) ofClass:[self class]];
 
 
 @interface FPGSwizzleHelper : NSObject
