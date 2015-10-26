@@ -1,5 +1,5 @@
 PODS:
-  - FPGSilentLogger (0.1.0):
+  - FPGSilentLogger (0.1.1):
     - JRSwizzle
   - JRSwizzle (1.0)
 
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  FPGSilentLogger: 809ca67a1effb6c305462589c15bb06cb3bf16a9
+  FPGSilentLogger: c69c6cb6606fbd35ce02bd74730b455f3a6e1465
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
 
 COCOAPODS: 0.39.0
