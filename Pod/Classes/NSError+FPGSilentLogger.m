@@ -20,9 +20,11 @@
 
 - (instancetype)fpg_initWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(nullable NSDictionary *)dict {
     
-    FPGLog(@"Error created. Domain: %@, Code: %ld, UserInfo: %@", domain, (long)code, dict);
+    [self fpg_initWithDomain:domain code:code userInfo:dict];
     
-    return [self fpg_initWithDomain:domain code:code userInfo:dict];
+    FPGLog(@"Error created. Domain: %@, Code: %ld, UserInfo: %@, Localized description: %@", domain, (long)code, dict, self.localizedDescription);
+    
+    return self;
 }
 
 @end
