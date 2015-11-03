@@ -58,7 +58,6 @@
     NSLog(@"Blood type with reused error");
     HKHealthStore *healthStore = [[HKHealthStore alloc] init];
     HKBloodTypeObject *bloodType = [healthStore bloodTypeWithError:&error];
-    //Does not work - TODO: figure out how this error is created!
     
     NSFileManager *defaultManager = [NSFileManager defaultManager];
     

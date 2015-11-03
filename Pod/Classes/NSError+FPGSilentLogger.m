@@ -14,7 +14,8 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        Swizzle(initWithDomain:code:userInfo:)
+        Swizzle(initWithDomain:code:userInfo:);
+        Swizzle(initWithCoder:);
     });
 }
 
@@ -25,6 +26,16 @@
     FPGLog(@"Error created. Domain: %@, Code: %ld, UserInfo: %@, Localized description: %@", domain, (long)code, dict, self.localizedDescription);
     
     return self;
+}
+
+- (instancetype)fpg_initWithCoder:(NSCoder *)aDecoder {
+    
+    [self fpg_initWithCoder:aDecoder];
+    
+    FPGLog(@"Error created. Domain: %@, Code: %ld, UserInfo: %@, Localized description: %@", self.domain, (long)self.code, self.userInfo, self.localizedDescription);
+    
+    return self;
+    
 }
 
 @end
